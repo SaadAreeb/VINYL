@@ -17,7 +17,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://YOUR-VERCEL-URL.vercel.app",
+      "https://vinyl-one-bice.vercel.app",
     ],
     credentials: true,
   })
