@@ -7,7 +7,7 @@ import { createDistortion } from "./distortion";
 import { createDistortionCurve } from "./helpers";
 import { createStereoPanner } from "./stereoPanner";
 import { createCompressor } from "./compressor";
-import { loadImpulse } from "./impulseLoader";
+import { loadImpulse } from "./impulseLoader.js";
 
 console.log("✅ audioEngine.js loaded");
 

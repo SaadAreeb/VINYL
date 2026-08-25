@@ -7,17 +7,25 @@ const musicRoute = require("./routes/music.route");
 const searchRoute = require("./routes/search.route");
 console.log("Search Route:", searchRoute);
 
+const {
+    globalLimiter
+} = require("./middleware/rateLimit.middleware");
+
 const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://YOUR-VERCEL-URL.vercel.app",
+    ],
     credentials: true,
   })
 );
 
 app.use(express.json());
 app.use(cookieParser());
+app.use(globalLimiter);
 
 app.use((req, res, next) => {
   console.log(req.method, req.url);
