@@ -38,8 +38,8 @@ async function registerUser(req,res){
      
     res.cookie("token", token, {
     httpOnly: true,
-    sameSite: "lax",
-    secure: false,
+    sameSite: "none",
+    secure: true,
 });
 
 console.log("Cookie sent");
