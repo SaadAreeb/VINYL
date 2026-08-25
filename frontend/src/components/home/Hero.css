@@ -1,0 +1,61 @@
+/* ================= Vinyl Rotation ================= */
+
+.vinyl {
+    animation: vinyl-spin 28s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+}
+
+@keyframes vinyl-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ================= Background Floating Glow ================= */
+
+.hero-glow-1 {
+    animation: floatOne 10s ease-in-out infinite;
+}
+
+.hero-glow-2 {
+    animation: floatTwo 12s ease-in-out infinite;
+}
+
+@keyframes floatOne {
+
+    0%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(-20px, 15px);
+    }
+}
+
+@keyframes floatTwo {
+
+    0%,
+    100% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(20px, -15px);
+    }
+}
+
+/* ================= Album Hover ================= */
+
+.album-cover {
+    transition: all .35s ease;
+}
+
+.album-cover:hover {
+    transform: scale(1.04);
+}
